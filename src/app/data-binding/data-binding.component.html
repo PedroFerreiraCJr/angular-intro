@@ -14,4 +14,44 @@
         <br>
         <img bind-src="urlImage" alt="Cidades">
     </article>
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+        </div>
+        <br>
+        <div class="{{ classe.value }}" role="alert" style="text-align: center;">
+            Texto colorido.
+        </div>
+
+        <!-- style property-binding -->
+        <div class="alert alert-danger" role="alert"
+            [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+            Texto somente em caso de erro.
+        </div>
+
+        <!-- class property-binding -->
+        <div class="alert" role="alert"
+            [class.alert-success]="classe.value == 'alert-success'">
+            A simple success alert—check it out!
+        </div>
+        <div class="alert" role="alert"
+            [class.alert-info]="classe.value == 'alert-info'">
+            A simple info alert—check it out!
+        </div>
+        <div class="alert" role="alert"
+            [class.alert-warning]="classe.value == 'alert-warning'">
+            A simple warning alert—check it out!
+        </div>
+        <div class="alert" role="alert"
+            [class.alert-danger]="classe.value == 'alert-danger'">
+            A simple infdangero alert—check it out!
+        </div>
+    </article>
 </section>
