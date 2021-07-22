@@ -1,0 +1,17 @@
+<section class="property-binding">
+    <article>
+        <h3>Interpolação</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Resolução de expressão: {{ 1 + 1 }}</p>
+        <p>Resolução de método do component: {{ getValor() }}</p>
+        <p>Resolução de expressão booleana: {{ cursoAngular && getCurtirCurso() }}</p>
+    </article>
+    <article>
+        <h3>Property Binding</h3>
+        <img [src]="urlImage" alt="Cidades">
+        <br>
+        <img [src]="getCityImage()" alt="Cidades">
+        <br>
+        <img bind-src="urlImage" alt="Cidades">
+    </article>
+</section>

@@ -1,8 +1,8 @@
+import { DataBindingModule } from './data-binding/data-binding.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-
 import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
@@ -11,7 +11,8 @@ import { CursosModule } from './cursos/cursos.module';
   ],
   imports: [
     BrowserModule,
-    CursosModule
+    CursosModule,
+    DataBindingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
