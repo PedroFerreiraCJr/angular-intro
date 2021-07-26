@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
+  // property binding
   url: string = 'https://loiane.training';
   cursoAngular: boolean = true;
   urlImage: string = 'https://lorempixel.com/400/200/city/';
+
+  // event binding
+  valorAtual?: string;
+  valorSalvo?: string;
+  isMouseOver?: boolean;
 
   constructor() { }
 
@@ -26,5 +32,23 @@ export class DataBindingComponent implements OnInit {
 
   getCityImage(): string {
     return this.urlImage;
+  }
+
+  public botaoClicado(): void {
+    alert('Botão clicado!');
+  }
+
+  public onKeyUp(event: KeyboardEvent): void {
+    let input = <HTMLInputElement> event.target;
+    this.valorAtual = input.value;
+  }
+
+  public onKeyEnter(event: any): void {
+    let input = <HTMLInputElement> event?.target;
+    this.valorSalvo = input.value;
+  }
+
+  public onMouseOverOut(): void {
+    this.isMouseOver = !this.isMouseOver;
   }
 }
