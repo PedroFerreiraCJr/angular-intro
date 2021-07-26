@@ -17,6 +17,13 @@ export class DataBindingComponent implements OnInit {
   valorSalvo?: string;
   isMouseOver?: boolean;
 
+  // Two-way data binding
+  nome: string = 'abc';
+  pessoa: any = {
+    nome: 'def',
+    idade: 20
+  };
+
   constructor() { }
 
   ngOnInit(): void {
