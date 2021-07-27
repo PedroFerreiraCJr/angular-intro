@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { DataBindingComponent } from './data-binding.component';
+
 import { InputPropertyModule } from './../input-property/input-property.module';
+import { OutputPropertyModule } from './../output-property/output-property.module';
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { InputPropertyModule } from './../input-property/input-property.module';
   imports: [
     CommonModule,
     FormsModule,
-    InputPropertyModule
+    InputPropertyModule,
+    OutputPropertyModule
   ],
   exports: [DataBindingComponent]
 })

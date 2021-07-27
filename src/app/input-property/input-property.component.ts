@@ -11,11 +11,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputPropertyComponent implements OnInit {
 
-  // expoe a propriedade para o seletor app-curso
-  // dê preferência a utilização do decorator @Input
-  // input property tambpem poed receber objetos
-  // os input properties podem ser utilizados para organizar melhor o projeto, através da criação de dump components
-  // que são componentes que simplesmente mostram informações para o usuário
+  // 1. expoe o atributo para o component inputPropertyComponent que tem o seletor app-curso
+  // 2. dê preferência a utilização do decorator @Input()
+  // 3. input property também pode receber objetos
+  // 4. as input properties podem ser utilizadas para organizar melhor o projeto, através da criação de dump components
+  //que são componentes que simplesmente mostram informações para o usuário
   @Input('nome')
   nomeCurso?: string;
 

@@ -117,5 +117,7 @@
 
     <div>
         <app-curso [nome]="nomeDoCurso"></app-curso>
+
+        <contador valor="10" (mudou)="onMudouValor($event)"></contador>
     </div>
 </section>
