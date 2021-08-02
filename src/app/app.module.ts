@@ -5,10 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CursosModule } from './cursos/cursos.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CicloComponent } from './ciclo/ciclo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CicloComponent
   ],
   imports: [
     BrowserModule,
